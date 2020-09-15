@@ -1,2 +1,7 @@
 # ChromSCape_benchmarking
+
 Scripts and dataset to reproduce benchmarking of SnapATAC, CisTopic, Cusanovich2018 and EpiScanpy &amp; scOrange on single-cell H3K27me3 cell mix from 'Interactive analysis of single-cell epigenomic landscapes with ChromSCape' 
+
+Code to_benchmark pipelines with scChIP_K27_cell_mix : Folder containing R and Python code to reproduce Figures 2a and c. Four scripts are made to produce the reduced feature space of SnapATAC, CisTopic, Cusanovich2018 and EpiScanpy from count H3K27me3 scChIP-seq data obtained from an in-silico mix of Jurkat, Ramos, HBCx-22 and MDA-MB-468  cells. In ‘Additional_Files’ folder: ‘hg38-blacklist.v2.bed’ contains ENCODE blacklisted regions to remove from the analysis for SnapATAC, ‘MM468_identified_CNA.bed’ contains previously identifed Copy Number Abberant regions in the MDA-MB-468 cell line and ‘merged_peaks.5000.bed’ contains peaks called from pseudo-bulk needed to run CisTopic, Cusanovich2018 and SCRAT-optimized (Fig 2b). Count matrices of each sample in 50kbp bins can be inputted directly in ChromSCape with the option ‘subsample - 500 cells’ to reproduce the analysis. In order not to store very large files, the transitory objects needed to run CisTopic and SnapATAC were saved as RData.  The ‘cross_analysis.R’ will produce the Figures 2a and b in the ‘Cross_analysis’ folder.
+
+Optimized_scChIP_pipe.ows: File in the scOrange format containing the ‘optimized workflow’ for Fig. 2c and openable with scOrange software (https://singlecell.biolab.si/).
